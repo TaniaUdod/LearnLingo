@@ -1,20 +1,38 @@
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../store/auth/authSelectors";
+import sprite from "../../images/sprite.svg";
+import {
+  AuthNavContainer,
+  ButtonWrap,
+  LogInBtn,
+  LogOutBtn,
+  RegisterBtn,
+} from "./AuthNav.styled";
 
 const AuthNav = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <>
+    <AuthNavContainer>
       {isLoggedIn ? (
-        <button type="submit">Log out</button>
+        <ButtonWrap>
+          <svg width="20" height="20" fill="#e0a39a">
+            <use href={`${sprite}#log-out`} />
+          </svg>
+          <LogOutBtn type="submit">Log out</LogOutBtn>
+        </ButtonWrap>
       ) : (
         <>
-          <button type="submit">Log in</button>
-          <button type="submit">Registration</button>
+          <ButtonWrap>
+            <svg width="20" height="20">
+              <use href={`${sprite}#log-in`} />
+            </svg>
+            <LogInBtn type="submit">Log in</LogInBtn>
+          </ButtonWrap>
+          <RegisterBtn type="submit">Registration</RegisterBtn>
         </>
       )}
-    </>
+    </AuthNavContainer>
   );
 };
 

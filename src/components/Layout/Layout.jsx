@@ -4,31 +4,44 @@ import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../store/auth/authSelectors";
 import AuthNav from "../AuthNav/AuthNav";
 import Loader from "../Loader/Loader";
+import sprite from "../../images/sprite.svg";
+import {
+  Container,
+  Header,
+  LinkStyled,
+  LogoText,
+  LogoWrap,
+  Nav,
+} from "./Layout.styled";
 
 const Layout = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <div>
-      <header>
-        <nav>
-          <Link to="/">
-            <img src="" alt="Logo" width={28} height={28} />
-            <p>LearnLingo</p>
-          </Link>
-          <Link to="/">Home</Link>
-          <Link to="/teachers">Teachers</Link>
-          {isLoggedIn && <Link to="/favorites">Favorites</Link>}
-        </nav>
+    <Container>
+      <Header>
+        <Link to="/">
+          <LogoWrap>
+            <svg width="28" height="28">
+              <use href={`${sprite}#logo`} />
+            </svg>
+            <LogoText>LearnLingo</LogoText>
+          </LogoWrap>
+        </Link>
+        <Nav>
+          <LinkStyled to="/">Home</LinkStyled>
+          <LinkStyled to="/teachers">Teachers</LinkStyled>
+          {isLoggedIn && <LinkStyled to="/favorites">Favorites</LinkStyled>}
+        </Nav>
         <AuthNav />
-      </header>
+      </Header>
 
       <main>
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>
-    </div>
+    </Container>
   );
 };
 
