@@ -19,7 +19,7 @@ const AuthNav = () => {
           <svg width="20" height="20" fill="#e0a39a">
             <use href={`${sprite}#log-out`} />
           </svg>
-          <LogOutBtn type="submit">Log out</LogOutBtn>
+          <LogOutBtn type="button">Log out</LogOutBtn>
         </ButtonWrap>
       ) : (
         <>
@@ -27,9 +27,9 @@ const AuthNav = () => {
             <svg width="20" height="20">
               <use href={`${sprite}#log-in`} />
             </svg>
-            <LogInBtn type="submit">Log in</LogInBtn>
+            <LogInBtn type="button">Log in</LogInBtn>
           </ButtonWrap>
-          <RegisterBtn type="submit">Registration</RegisterBtn>
+          <RegisterBtn type="button">Registration</RegisterBtn>
         </>
       )}
     </AuthNavContainer>
