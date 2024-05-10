@@ -12,18 +12,14 @@ export const ButtonWrap = styled.div`
   align-items: center;
   gap: 8px;
   transition: transform 150ms linear;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.1);
   }
 `;
 
-export const LogOutBtn = styled.button`
-  font-weight: 700;
-  line-height: 20px;
-`;
-
-export const LogInBtn = styled.button`
+export const LogBtn = styled.button`
   font-weight: 700;
   line-height: 20px;
 `;
