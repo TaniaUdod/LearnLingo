@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import fetchTeachers from "../../services/fetchTeachers";
+import Filter from "../../components/Filter/Filter";
+import TeachersList from "../../components/TeachersList/TeachersList";
 
 const Teachers = () => {
   const [teachers, setTeachers] = useState([]);
@@ -23,11 +25,15 @@ const Teachers = () => {
   }, []);
 
   return (
-    <div>
-      {teachers.map((teacher) => (
-        <div key={teacher.id}>{teacher.name}</div>
-      ))}
-    </div>
+    <>
+      <Filter />
+      <TeachersList />
+      <div>
+        {teachers.map((teacher, index) => (
+          <div key={index}>{teacher.name}</div>
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -2,10 +2,10 @@ import { ref, get } from "firebase/database";
 import { db } from "../config/firebase";
 
 const fetchTeachers = async () => {
-  const teachersRef = ref(db, "/");
-
   try {
+    const teachersRef = ref(db, "/");
     const snapshot = await get(teachersRef);
+
     if (snapshot.exists()) {
       return snapshot.val();
     } else {
@@ -13,7 +13,7 @@ const fetchTeachers = async () => {
       return null;
     }
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
     return null;
   }
 };
