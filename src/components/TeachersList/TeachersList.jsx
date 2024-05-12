@@ -1,11 +1,16 @@
 import React from "react";
 import TeacherCard from "../TeacherCard/TeacherCard";
+import { Item, List } from "./TeachersList.styled";
 
-const TeachersList = () => {
+const TeachersList = ({ teachers, defaultLevel }) => {
   return (
-    <div>
-      <TeacherCard />
-    </div>
+    <List>
+      {teachers.map((teacher, index) => (
+        <Item key={index}>
+          <TeacherCard teacher={teacher} defaultLevel={defaultLevel} />
+        </Item>
+      ))}
+    </List>
   );
 };
 

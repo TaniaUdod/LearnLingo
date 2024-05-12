@@ -17,7 +17,7 @@ import {
 
 const Home = () => {
   return (
-    <>
+    <div style={{ padding: "0 15px" }}>
       <HeroWrap>
         <TitleWrap>
           <Title>
@@ -63,7 +63,7 @@ const Home = () => {
           <DetailsText>Tutor nationalities</DetailsText>
         </DetailsItem>
       </DetailsList>
-    </>
+    </div>
   );
 };
 

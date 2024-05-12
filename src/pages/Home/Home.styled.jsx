@@ -8,7 +8,6 @@ export const HeroWrap = styled.div`
 
 export const TitleWrap = styled.div`
   width: 720px;
-  height: 530px;
   border-radius: 30px;
   background: #f8f8f8;
   padding: 98px 108px 98px 64px;
