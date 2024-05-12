@@ -5,20 +5,13 @@ import { selectIsLoggedIn } from "../../store/auth/authSelectors";
 import AuthNav from "../AuthNav/AuthNav";
 import Loader from "../Loader/Loader";
 import sprite from "../../images/sprite.svg";
-import {
-  Container,
-  Header,
-  LinkStyled,
-  LogoText,
-  LogoWrap,
-  Nav,
-} from "./Layout.styled";
+import { Header, LinkStyled, LogoText, LogoWrap, Nav } from "./Layout.styled";
 
 const Layout = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <Container>
+    <>
       <Header>
         <Link to="/">
           <LogoWrap>
@@ -41,7 +34,7 @@ const Layout = () => {
           <Outlet />
         </Suspense>
       </main>
-    </Container>
+    </>
   );
 };
 

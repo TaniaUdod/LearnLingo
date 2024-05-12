@@ -24,6 +24,7 @@ export const ModalContent = styled.div`
   width: 566px;
   max-height: 95vh;
   gap: 40px;
+  overflow: overlay;
 `;
 
 export const CloseButton = styled.button`

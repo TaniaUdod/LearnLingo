@@ -129,3 +129,19 @@ export const LevelItem = styled.li`
   font-weight: 500;
   line-height: 16px;
 `;
+
+export const ButtonBook = styled.button`
+  padding: 16px 48px;
+  border-radius: 12px;
+  background-color: #e0a39a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 32px;
+  transition: transform 150ms linear, background-color 150ms linear;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #f2c0bd;
+  }
+`;

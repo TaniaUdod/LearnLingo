@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  width: 100%;
+  min-width: 320px;
+  max-width: 1342px;
+  margin: 0 auto;
+  padding: 0px 15px;
+`;
+
 export const HeroWrap = styled.div`
   display: flex;
   gap: 24px;
@@ -32,12 +40,14 @@ export const TitleAccent = styled.span`
 export const Text = styled.p`
   line-height: 22px;
   letter-spacing: -0.32px;
-  width: 471px;
+  max-width: 471px;
   margin-bottom: 64px;
 `;
 
 export const Button = styled.button`
-  padding: 16px 88px;
+  width: 100%;
+  max-width: 267px;
+  height: 60px;
   border-radius: 12px;
   background-color: #e0a39a;
   font-size: 18px;
@@ -80,5 +90,5 @@ export const DetailsText = styled.p`
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.28px;
-  width: 96px;
+  width: 74px;
 `;

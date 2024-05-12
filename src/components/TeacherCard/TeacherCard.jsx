@@ -12,20 +12,21 @@ import TeacherInfo from "../TeacherInfo/TeacherInfo";
 import Modal from "../Modal/Modal";
 import BookForm from "../BookForm/BookForm";
 import {
+  ButtonBook,
+  ButtonFavorite,
+  ButtonMore,
   Img,
   ImgWrap,
+  LevelItem,
+  LevelList,
   Name,
   Section,
-  TitleItem,
-  TitleList,
-  TitleWrap,
   Text,
   TextSpan,
-  ButtonFavorite,
+  TitleItem,
+  TitleList,
   TitleText,
-  ButtonMore,
-  LevelList,
-  LevelItem,
+  TitleWrap,
 } from "./TeacherCard.styled";
 
 const TeacherCard = ({ teacher, defaultLevel }) => {
@@ -192,15 +193,19 @@ const TeacherCard = ({ teacher, defaultLevel }) => {
 
         {readMore && (
           <div>
-            <button type="button" onClick={openModal}>
+            <ButtonBook type="button" onClick={openModal}>
               Book trial lesson
-            </button>
+            </ButtonBook>
           </div>
         )}
 
         {isModalOpen && (
           <Modal onClose={closeModal} isOpen={openModal}>
-            <BookForm isOpen={openModal} teacher={teacher} />
+            <BookForm
+              isOpen={openModal}
+              onClose={closeModal}
+              teacher={teacher}
+            />
           </Modal>
         )}
       </div>

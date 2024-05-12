@@ -5,19 +5,20 @@ import hero2x from "../../images/hero@2x.png";
 import {
   Button,
   HeroWrap,
+  Container,
+  DetailsItem,
+  DetailsList,
+  DetailsNumber,
+  DetailsText,
   Text,
   Title,
   TitleAccent,
   TitleWrap,
-  DetailsList,
-  DetailsItem,
-  DetailsNumber,
-  DetailsText,
 } from "./Home.styled";
 
 const Home = () => {
   return (
-    <div style={{ padding: "0 15px" }}>
+    <Container>
       <HeroWrap>
         <TitleWrap>
           <Title>
@@ -63,7 +64,7 @@ const Home = () => {
           <DetailsText>Tutor nationalities</DetailsText>
         </DetailsItem>
       </DetailsList>
-    </div>
+    </Container>
   );
 };
 
