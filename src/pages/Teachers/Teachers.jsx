@@ -11,6 +11,7 @@ import Loader from "../../components/Loader/Loader";
 import { Button, ButtonWrap, Section } from "./Teachers.styled";
 
 const Teachers = () => {
+  const [allTeachers, setAllTeachers] = useState([]);
   const [cardsLimit, setCardsLimit] = useState(4);
   const [isLoadMore, setIsLoadMore] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +27,7 @@ const Teachers = () => {
         const teachersRef = ref(db, "/");
         const snapshot = await get(teachersRef);
         if (snapshot.exists()) {
-          return snapshot.val();
+          return setAllTeachers(snapshot.val());
         }
       } catch (error) {
         console.error(error.message);
@@ -61,7 +62,7 @@ const Teachers = () => {
     fetchTeachers();
   }, [dispatch, cardsLimit]);
 
-  const filteredTeachers = getFilteredTeachers(teachers, filter);
+  const filteredTeachers = getFilteredTeachers(allTeachers, filter);
 
   const loadMore = () => setCardsLimit((prev) => prev + 4);
 
@@ -87,7 +88,7 @@ const Teachers = () => {
       {isLoading && <Loader />}
 
       <ButtonWrap>
-        {isLoadMore && (
+        {isLoadMore && filteredTeachers.length === allTeachers.length && (
           <Button type="button" onClick={loadMore}>
             Load more
           </Button>

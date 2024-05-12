@@ -1,5 +1,5 @@
-export const getFilteredTeachers = (teachers, filter) => {
-  return teachers.filter((teacher) => {
+export const getFilteredTeachers = (allTeachers, filter) => {
+  return allTeachers.filter((teacher) => {
     const { language, level, price } = filter;
 
     if (!language && !level && !price) {

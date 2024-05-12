@@ -28,20 +28,10 @@ export const teachersSlice = createSlice({
     setFilter: (state, action) => {
       state.filter = action.payload;
     },
-    removeFilter(state) {
-      state.filter.language = "";
-      state.filter.level = "";
-      state.filter.price = "";
-    },
   },
 });
 
 export const teachersReducer = teachersSlice.reducer;
 
-export const {
-  addTeachers,
-  addFavorite,
-  removeFavorite,
-  setFilter,
-  removeFilter,
-} = teachersSlice.actions;
+export const { addTeachers, addFavorite, removeFavorite, setFilter } =
+  teachersSlice.actions;

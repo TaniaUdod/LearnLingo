@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Section = styled.div`
   padding: 0 15px;
   background-color: #f8f8f8;
+  min-height: 100vh;
 `;
 
 export const ButtonWrap = styled.div`
