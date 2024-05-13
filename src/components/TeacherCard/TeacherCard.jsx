@@ -43,6 +43,8 @@ const TeacherCard = ({ teacher, defaultLevel }) => {
     conditions,
   } = teacher;
 
+  defaultLevel = defaultLevel || teacher.levels[0];
+
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -201,11 +203,7 @@ const TeacherCard = ({ teacher, defaultLevel }) => {
 
         {isModalOpen && (
           <Modal onClose={closeModal} isOpen={openModal}>
-            <BookForm
-              isOpen={openModal}
-              onClose={closeModal}
-              teacher={teacher}
-            />
+            <BookForm onClose={closeModal} teacher={teacher} />
           </Modal>
         )}
       </div>

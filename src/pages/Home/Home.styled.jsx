@@ -63,10 +63,11 @@ export const Button = styled.button`
 
 export const DetailsList = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: 30px;
   border: 1.5px dashed #e0a39a;
-  padding: 40px 120px;
+  width: 100%;
+  height: 116px;
   margin-bottom: 32px;
 `;
 
