@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  min-width: 320px;
   max-width: 1342px;
   margin: 0 auto;
   padding: 0px 15px;
@@ -10,15 +9,25 @@ export const Container = styled.div`
 
 export const HeroWrap = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 24px;
   margin-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 `;
 
 export const TitleWrap = styled.div`
-  width: 720px;
+  max-width: 720px;
   border-radius: 30px;
   background: #f8f8f8;
-  padding: 98px 108px 98px 64px;
+  padding: 24px;
+
+  @media screen and (min-width: 768px) {
+    padding: 98px 108px 98px 64px;
+    margin: 0 auto;
+  }
 `;
 
 export const Title = styled.h1`
@@ -63,12 +72,19 @@ export const Button = styled.button`
 
 export const DetailsList = styled.ul`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   border-radius: 30px;
   border: 1.5px dashed #e0a39a;
   width: 100%;
-  height: 116px;
   margin-bottom: 32px;
+  gap: 24px;
+  padding: 24px 14px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    height: 116px;
+  }
 `;
 
 export const DetailsItem = styled.li`

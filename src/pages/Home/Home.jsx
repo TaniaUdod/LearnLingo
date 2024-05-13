@@ -35,14 +35,9 @@ const Home = () => {
           </Link>
         </TitleWrap>
 
-        <picture>
+        <picture style={{ margin: "0 auto" }}>
           <source srcSet={hero2x} media="(min-resolution: 192dpi)" />
-          <img
-            src={hero}
-            alt="Girl with laptop"
-            width="568px"
-            height="530px"
-          ></img>
+          <img src={hero} alt="Girl with laptop" width="568px" height="530px" />
         </picture>
       </HeroWrap>
 

@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   width: 100%;
-  min-width: 320px;
   max-width: 1184px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding-top: 32px;
   margin-bottom: 32px;

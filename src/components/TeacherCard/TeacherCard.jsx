@@ -15,6 +15,7 @@ import {
   ButtonBook,
   ButtonFavorite,
   ButtonMore,
+  CardWrap,
   Img,
   ImgWrap,
   LevelItem,
@@ -94,7 +95,7 @@ const TeacherCard = ({ teacher, defaultLevel }) => {
         <Img src={avatar_url} alt="Teacher avatar" />
       </ImgWrap>
 
-      <div style={{ width: "86%" }}>
+      <CardWrap>
         <TitleWrap>
           <div>
             <TitleText>Languages</TitleText>
@@ -206,7 +207,7 @@ const TeacherCard = ({ teacher, defaultLevel }) => {
             <BookForm onClose={closeModal} teacher={teacher} />
           </Modal>
         )}
-      </div>
+      </CardWrap>
     </Section>
   );
 };

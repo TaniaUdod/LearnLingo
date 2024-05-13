@@ -3,11 +3,18 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
   align-items: center;
   padding: 20px 15px;
-  margin: 0 auto;
-  max-width: 1184px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
+    margin: 0 auto;
+    max-width: 1184px;
+  }
 `;
 
 export const LogoWrap = styled.div`

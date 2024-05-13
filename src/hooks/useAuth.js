@@ -11,7 +11,6 @@ const useAuth = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         dispatch(addUser({ email: user.email, accessToken: user.accessToken }));
-        console.log(user);
       }
     });
 

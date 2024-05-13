@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 48px;
   width: 100%;
@@ -10,6 +11,10 @@ export const Section = styled.div`
   border-radius: 24px;
   background-color: #fff;
   margin-bottom: 32px;
+
+  @media screen and (min-width: 1024px) {
+    flex-wrap: unset;
+  }
 `;
 
 export const ImgWrap = styled.div`
@@ -44,9 +49,20 @@ export const Img = styled.img`
   border-radius: 50%;
 `;
 
+export const CardWrap = styled.div`
+  @media screen and (min-width: 1024px) {
+    width: 86%;
+  }
+`;
+
 export const TitleWrap = styled.div`
   display: flex;
   margin-bottom: 32px;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    gap: unset;
+  }
 `;
 
 export const TitleText = styled.p`
@@ -70,9 +86,16 @@ export const Name = styled.p`
 
 export const TitleList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: flex-start;
+  text-align: center;
   gap: 16px;
   margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: unset;
+  }
 `;
 
 export const TitleItem = styled.li`
@@ -93,7 +116,10 @@ export const TitleItem = styled.li`
 
 export const ButtonFavorite = styled.button`
   display: flex;
-  margin-left: 64px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 64px;
+  }
 `;
 
 export const Text = styled.p`
@@ -116,6 +142,7 @@ export const ButtonMore = styled.button`
 
 export const LevelList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 `;
 
