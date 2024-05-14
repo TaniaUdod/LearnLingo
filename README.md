@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# LearnLingo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an application for a company offering online language tutoring services. The application allows users to quickly find tutors, view their data, and book trial lessons.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- **React** to build the user interface and manage components efficiently.
+- **Firebase** (Firebase Realtime Database) for storing tutors and user authentication data.
+- **React Router** for navigation, enabling users to switch between different views of their tasks seamlessly.
+- **React Hook Form and Yup** for form handling and validation.
+- **Redux** for state management, providing a centralized store for teachers and facilitating efficient data management.
+- **Redux Persist** to persist the Redux store data to the browser's local storage, ensuring data persistence across sessions.
+- **Styled components** for styling the application, ensuring a visually appealing design.
+- **Responsive design** adapting to different screen sizes.
 
-### `npm start`
+## Layout
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application layout includes three main pages: "Home", "Teachers", and "Favorites". The app also features modal windows for authentication, viewing additional tutor information, and booking trial lessons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![README-img](./public/README-img.png)
 
-### `npm test`
+## Technical Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Implemented user authentication using Firebase Authentication (registration, login, fetching current user data, logout).
+2. Registration and login forms have minimal validation using React Hook Form and Yup. The modal window with the form closed by clicking the "x" button, clicking on the backdrop, or pressing the Esc key.
+3. Tutor data is stored in the Firebase Realtime Database.
+4. The "Teachers" page renders four teacher cards with tutor descriptions that can be filtered and loaded more cards upon clicking the "Load more" button.
+5. Users can add tutors to favorites and view them on the "Favorites" private page.
+6. Users can book trial lessons. The modal window with a form for booking a trial lesson has minimal validation using React Hook Form and Yup.
+7. Implemented routing using React Router.
+8. Implemented tutor filtering based on different criteria (languages, levels of knowledge, price per hour).
+9. Responsive and semantic markup.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/TaniaUdod/learn-lingo.git
+```
 
-### `npm run eject`
+2. Install dependencies.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Run the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application will run on http://localhost:3000/.
 
-## Learn More
+### Accessing the Application Online
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you want to access the application online, you can visit
+https://taniaudod.github.io/learn-lingo/.
